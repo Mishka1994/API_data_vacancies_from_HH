@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "api-data-vacancies-from-hh"
+version = "0.1.0"
+description = ""
+authors = ["mihail_samofalov"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
