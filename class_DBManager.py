@@ -13,19 +13,19 @@ class DBManager:
         :param user: Имя пользователя
         :param password: пароль
         """
-        self.host = host
-        self.database = database
-        self.user = user
+        self.__host = host
+        self.__database = database
+        self.__user = user
         self.__password = password
-        self.conn = psycopg2.connect(host=self.host,
-                                     database=self.database,
-                                     user=self.user,
+        self.conn = psycopg2.connect(host=self.__host,
+                                     database=self.__database,
+                                     user=self.__user,
                                      password=self.__password
                                      )
         self.cur = self.conn.cursor()
 
     def __repr__(self):
-        return f'{self.__class__.__name__},\n({self.host}, {self.database}, {self.user}', \
+        return f'{self.__class__.__name__},\n({self.__host}, {self.__database}, {self.__user}', \
                f'{self.conn}, {self.cur})'
 
     def __str__(self):
